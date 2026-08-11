@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration - ABC Coaching</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <div class="auth-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="auth-left">
+
+                <div class="brand">
+
+                    <img src="images/logo.png" alt="ABC Coaching Logo">
+
+                    <h1>ABC Coaching</h1>
+
+                </div>
+
+                <h2>Start Your Learning Journey</h2>
+
+                <p>
+                    Join our coaching institute and start learning
+                    with experienced teachers and quality study material.
+                </p>
+
+                <div class="features">
+
+                    <div>
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span>Expert Teachers</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Quality Study Material</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Track Your Progress</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="auth-right">
+
+                <div class="form-header">
+
+                    <h2>Create Account</h2>
+
+                    <p>Register as a student</p>
+
+                </div>
+
+
+                <form action="register.php" method="post">
+
+                    <!-- Full Name -->
+
+                    <div class="input-group">
+
+                        <label>Full Name</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                name="fullname"
+                                placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Father's Name -->
+
+                    <div class="input-group">
+
+                        <label>Father's Name</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <input
+                                type="text"
+                                name="fathername"
+                                placeholder="Enter father's name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label>Email Address</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Mobile -->
+
+                    <div class="input-group">
+
+                        <label>Mobile Number</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                maxlength="10"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Course -->
+
+                    <div class="input-group">
+
+                        <label>Select Course</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <select name="course" required>
+
+                                <option value="">Select your course</option>
+
+                                <option value="web-development">
+                                    Web Development
+                                </option>
+
+                                <option value="python">
+                                    Python Programming
+                                </option>
+
+                                <option value="java">
+                                    Java Programming
+                                </option>
+
+                                <option value="c-programming">
+                                    C Programming
+                                </option>
+
+                                <option value="spoken-english">
+                                    Spoken English
+                                </option>
+
+                                <option value="competitive-exam">
+                                    Competitive Exams
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                name="password"
+                                placeholder="Create password"
+                                required>
+
+                            <i
+                                class="fa-solid fa-eye password-eye"
+                                onclick="togglePassword('registerPassword', this)">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="input-group">
+
+                        <label>Confirm Password</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirm_password"
+                                placeholder="Confirm password"
+                                required>
+
+                            <i
+                                class="fa-solid fa-eye password-eye"
+                                onclick="togglePassword('confirmPassword', this)">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="terms">
+
+                        <input type="checkbox" required>
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                        </span>
+
+                    </div>
+
+
+                    <!-- Register Button -->
+
+                    <button type="submit" class="auth-btn">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+
+                <!-- Login Link -->
+
+                <div class="bottom-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function togglePassword(inputId, icon) {
+
+            const input = document.getElementById(inputId);
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove("fa-eye");
+
+                icon.classList.add("fa-eye-slash");
+
+            } else {
+
+                input.type = "password";
+
+                icon.classList.remove("fa-eye-slash");
+
+                icon.classList.add("fa-eye");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
